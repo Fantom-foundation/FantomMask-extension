@@ -1,5 +1,14 @@
 const defaultNetworksData = [
   {
+    labelKey: 'fantom',
+    iconColor: '#29B6AF',
+    providerType: 'rpc',
+    rpcUrl: 'https://rpcapi.fantom.network',
+    chainId: '250',
+    ticker: 'FTM',
+    blockExplorerUrl: 'https://explorer.fantom.network',
+  },
+  {
     labelKey: 'mainnet',
     iconColor: '#29B6AF',
     providerType: 'mainnet',
@@ -50,7 +59,7 @@ const defaultNetworksData = [
     border: '1px solid #6A737D',
     providerType: 'localhost',
     rpcUrl: 'http://localhost:8545/',
-    blockExplorerUrl: 'https://etherscan.io',
+    blockExplorerUrl: 'https://explorer.fantom.network',
   },
 ]
 

@@ -84,7 +84,7 @@ class NetworkDropdown extends Component {
     setProviderType(newProviderType)
   }
 
-  renderCustomOption (provider) {
+  renderCustomOption (provider) { // render currently selected custom RPC
     const { rpcTarget, type, ticker, nickname } = provider
     const network = this.props.network
 
@@ -95,6 +95,7 @@ class NetworkDropdown extends Component {
     switch (rpcTarget) {
 
       case 'http://localhost:8545':
+      case 'https://rpcapi.fantom.network':
         return null
 
       default:
@@ -124,7 +125,7 @@ class NetworkDropdown extends Component {
     }
   }
 
-  renderCommonRpc (rpcListDetail, provider) {
+  renderCommonRpc (rpcListDetail, provider) { // render other custom RPCs (not selected one, not localhost)
     const reversedRpcListDetail = rpcListDetail.slice().reverse()
 
     return reversedRpcListDetail.map((entry) => {
@@ -183,7 +184,9 @@ class NetworkDropdown extends Component {
 
     let name
 
-    if (providerName === 'mainnet') {
+    if (providerName === 'fantom') {
+      name = this.context.t('fantom')
+    } else if (providerName === 'mainnet') {
       name = this.context.t('mainnet')
     } else if (providerName === 'ropsten') {
       name = this.context.t('ropsten')
@@ -245,6 +248,29 @@ class NetworkDropdown extends Component {
             {this.context.t('defaultNetwork')}
           </div>
         </div>
+        <DropdownMenuItem
+          key="fantom"
+          closeMenu={() => this.props.hideNetworkDropdown()}
+          onClick={() => this.props.setRpcTarget('https://rpcapi.fantom.network', '250', 'FTM', this.context.t('fantom') + 'nickname')}
+          style={{ ...dropdownMenuItemStyle, borderColor: '#038789' }}
+        >
+          {
+            providerType === 'rpc' && activeNetwork === 'https://rpcapi.fantom.network'
+              ? <i className="fa fa-check" />
+              : <div className="network-check__transparent">✓</div>
+          }
+          <NetworkDropdownIcon backgroundColor="#7057ff" isSelected={providerType === 'rpc' && activeNetwork === 'https://rpcapi.fantom.network'} />
+          <span
+            className="network-name-item"
+            style={{
+              color: providerType === 'rpc' && activeNetwork === 'https://rpcapi.fantom.network'
+                ? '#ffffff'
+                : '#9b9b9b',
+            }}
+          >
+            {this.context.t('fantom')}
+          </span>
+        </DropdownMenuItem>
         <DropdownMenuItem
           key="main"
           closeMenu={() => this.props.hideNetworkDropdown()}

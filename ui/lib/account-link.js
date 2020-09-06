@@ -24,6 +24,9 @@ export default function getAccountLink (address, network, rpcPrefs) {
     case 5: // goerli test net
       link = `https://goerli.etherscan.io/address/${address}`
       break
+    case 250: // fantom main net
+      link = `https://explorer.fantom.network/address/${address}`
+      break
     default:
       link = ''
       break

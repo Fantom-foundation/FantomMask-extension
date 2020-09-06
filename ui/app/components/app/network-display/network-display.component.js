@@ -7,6 +7,7 @@ import {
   RINKEBY_NETWORK_ID,
   KOVAN_NETWORK_ID,
   GOERLI_NETWORK_ID,
+  FANTOM_NETWORK_ID,
 } from '../../../../../app/scripts/controllers/network/enums'
 
 const networkIdToTypeMap = {
@@ -15,6 +16,7 @@ const networkIdToTypeMap = {
   [RINKEBY_NETWORK_ID]: 'rinkeby',
   [GOERLI_NETWORK_ID]: 'goerli',
   [KOVAN_NETWORK_ID]: 'kovan',
+  [FANTOM_NETWORK_ID]: 'fantom',
 }
 
 export default class NetworkDisplay extends Component {

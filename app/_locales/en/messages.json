@@ -1231,6 +1231,9 @@
   "goerli": {
     "message": "Goerli Test Network"
   },
+  "fantom": {
+    "message": "Fantom Opera Network"
+  },
   "save": {
     "message": "Save"
   },
