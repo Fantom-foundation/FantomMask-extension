@@ -21,7 +21,7 @@
     "message": "Částka"
   },
   "appDescription": {
-    "message": "Ethereum rozšíření prohlížeče",
+    "message": "Fantom rozšíření prohlížeče",
     "description": "The description of the application"
   },
   "appName": {
@@ -125,16 +125,16 @@
     "message": "Vklad"
   },
   "depositEther": {
-    "message": "Vložit Ether"
+    "message": "Vložit Fantom"
   },
   "details": {
     "message": "Podrobnosti"
   },
   "directDepositEther": {
-    "message": "Vložit Ether přímo"
+    "message": "Vložit Fantom přímo"
   },
   "directDepositEtherExplainer": {
-    "message": "Pokud už vlastníte nějaký Ether, nejrychleji ho dostanete do peněženky přímým vkladem."
+    "message": "Pokud už vlastníte nějaký Fantom, nejrychleji ho dostanete do peněženky přímým vkladem."
   },
   "done": {
     "message": "Hotovo"
@@ -152,7 +152,7 @@
     "message": "Zadejte heslo"
   },
   "etherscanView": {
-    "message": "Prohlédněte si účet na Etherscan"
+    "message": "Prohlédněte si účet v Exploreru"
   },
   "exportPrivateKey": {
     "message": "Exportovat privátní klíč"
@@ -181,7 +181,7 @@
     "message": "Cena paliva (GWEI)"
   },
   "getEther": {
-    "message": "Získejte Ether"
+    "message": "Získejte Fantom"
   },
   "getEtherFromFaucet": {
     "message": "Získejte Ether z faucetu za $1.",
@@ -260,7 +260,7 @@
     "message": "Zpráva"
   },
   "metamaskDescription": {
-    "message": "FantomMask je bezpečný osobní trezor pro Ethereum."
+    "message": "FantomMask je bezpečný osobní trezor pro Fantom."
   },
   "myAccounts": {
     "message": "Moje účty"
@@ -269,14 +269,14 @@
     "message": "Musíte zvolit aspoň 1 token."
   },
   "needEtherInWallet": {
-    "message": "Potřebujete Ether v peněžence, abyste mohli pomocí FantomMasku interagovat s decentralizovanými aplikacemi."
+    "message": "Potřebujete Fantomy v peněžence, abyste mohli pomocí FantomMasku interagovat s decentralizovanými aplikacemi."
   },
   "needImportFile": {
     "message": "Musíte zvolit soubor k importu.",
     "description": "User is important an account and needs to add a file to continue"
   },
   "negativeETH": {
-    "message": "Nelze odeslat zápornou částku ETH."
+    "message": "Nelze odeslat zápornou částku FTM."
   },
   "networks": {
     "message": "Sítě"
@@ -375,7 +375,7 @@
     "message": "Odeslat"
   },
   "sendETH": {
-    "message": "Odeslat ETH"
+    "message": "Odeslat FTM"
   },
   "sendTokens": {
     "message": "Odeslat tokeny"

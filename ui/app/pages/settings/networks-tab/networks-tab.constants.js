@@ -1,7 +1,7 @@
 const defaultNetworksData = [
   {
     labelKey: 'fantom',
-    iconColor: '#29B6AF',
+    iconColor: '#9064FF',
     providerType: 'rpc',
     rpcUrl: 'https://rpcapi.fantom.network',
     chainId: '250',

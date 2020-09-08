@@ -22,6 +22,7 @@ import {
 const defaultProviderConfig = {
   type: 'rpc',
   rpcTarget: 'https://rpcapi.fantom.network',
+  blockExplorerUrl: 'https://explorer.fantom.network/transactions/',
 }
 
 const defaultNetworkConfig = {

@@ -134,7 +134,7 @@ class NetworkDropdown extends Component {
       const nickname = entry.nickname || ''
       const currentRpcTarget = provider.type === 'rpc' && rpc === provider.rpcTarget
 
-      if ((rpc === 'http://localhost:8545') || currentRpcTarget) {
+      if ((rpc === 'http://localhost:8545') || (rpc === 'https://rpcapi.fantom.network') || currentRpcTarget) {
         return null
       } else {
         const chainId = entry.chainId
@@ -244,14 +244,11 @@ class NetworkDropdown extends Component {
             {this.context.t('networks')}
           </div>
           <div className="network-dropdown-divider" />
-          <div className="network-dropdown-content">
-            {this.context.t('defaultNetwork')}
-          </div>
         </div>
         <DropdownMenuItem
           key="fantom"
           closeMenu={() => this.props.hideNetworkDropdown()}
-          onClick={() => this.props.setRpcTarget('https://rpcapi.fantom.network', '250', 'FTM', this.context.t('fantom') + 'nickname')}
+          onClick={() => this.props.setRpcTarget('https://rpcapi.fantom.network', '250', 'FTM', this.context.t('fantom'), { blockExplorerUrl: 'https://explorer.fantom.network/transactions/' })}
           style={{ ...dropdownMenuItemStyle, borderColor: '#038789' }}
         >
           {
