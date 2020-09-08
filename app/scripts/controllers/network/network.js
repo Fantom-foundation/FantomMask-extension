@@ -15,30 +15,17 @@ import { createSwappableProxy, createEventEmitterProxy } from 'swappable-obj-pro
 const networks = { networkList: {} }
 
 import {
-  RINKEBY,
-  MAINNET,
   LOCALHOST,
   INFURA_PROVIDER_TYPES,
 } from './enums'
 
-const env = process.env.METAMASK_ENV
-const METAMASK_DEBUG = process.env.METAMASK_DEBUG
-
-let defaultProviderConfigType
-if (process.env.IN_TEST === 'true') {
-  defaultProviderConfigType = LOCALHOST
-} else if (METAMASK_DEBUG || env === 'test') {
-  defaultProviderConfigType = RINKEBY
-} else {
-  defaultProviderConfigType = MAINNET
-}
-
 const defaultProviderConfig = {
-  type: defaultProviderConfigType,
+  type: 'rpc',
+  rpcTarget: 'https://rpcapi.fantom.network',
 }
 
 const defaultNetworkConfig = {
-  ticker: 'ETH',
+  ticker: 'ETH', // default currency symbol is actually configured in MetamaskController
 }
 
 export default class NetworkController extends EventEmitter {

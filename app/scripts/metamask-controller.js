@@ -127,6 +127,12 @@ export default class MetamaskController extends EventEmitter {
     })
 
     this.currencyRateController = new CurrencyRateController(undefined, initState.CurrencyController)
+    // Hack to override default currency symbol
+    this.currencyRateController.defaultConfig.nativeCurrency = 'FTM'
+    this.currencyRateController.defaultState.nativeCurrency = 'FTM'
+    this.currencyRateController.initialize()
+    this.currencyRateController.configure({ disabled: false }, false, false)
+    this.currencyRateController.poll()
 
     this.phishingController = new PhishingController()
 

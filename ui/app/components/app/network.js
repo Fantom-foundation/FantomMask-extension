@@ -133,6 +133,20 @@ export default class Network extends Component {
           </NetworkIndicator>
         )
 
+      case 'rpc':
+        if (providerUrl === 'https://rpcapi.fantom.network') {
+          return (
+            <NetworkIndicator disabled={disabled} hoverText={t('fantom')} onClick={onClick} providerName={providerName}>
+              <NetworkDropdownIcon
+                backgroundColor="#690496"
+                nonSelectBackgroundColor="#b039f3"
+                loading={networkNumber === 'loading'}
+              />
+              <div className="network-name">{t('fantom')}</div>
+            </NetworkIndicator>
+          )
+        }
+
       default:
         return (
           <NetworkIndicator
